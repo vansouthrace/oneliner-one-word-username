@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+// One Word, One Username, One Reward: my own make.fun username, written to /output/entry.txt.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = `calm-badger-97-9980`;
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry);
+// My make.fun handle, one word and nothing else.
+const entry = "calm-badger-97-9980";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
